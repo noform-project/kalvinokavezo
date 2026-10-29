@@ -1,0 +1,422 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Kalvino Coffee – specialty kávé, reggeli és brunch Hódmezővásárhelyen</title>
+  <meta name="description" content="Kalvino Coffee a hódmezővásárhelyi Kálvin téren: specialty kávé, reggeli, napi leves, kovászos kenyér és hétvégén brunch. Kutya, gyerek és mindenki barátja :)">
+  <meta name="theme-color" content="#F7F1E6">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/dmsans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    /* Animációk csak akkor, ha a JS fut és a látogató nem kért csökkentett mozgást */
+    document.documentElement.classList.add('js');
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.documentElement.classList.add('motion');
+    }
+  </script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+<!-- Ikonkészlet (saját, egyszerű SVG-k) -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-paw" viewBox="0 0 24 24">
+    <ellipse cx="12" cy="16.2" rx="5" ry="4.2"/>
+    <ellipse cx="5.2" cy="10.6" rx="2" ry="2.6" transform="rotate(-20 5.2 10.6)"/>
+    <ellipse cx="9.4" cy="6.4" rx="2.1" ry="2.8" transform="rotate(-6 9.4 6.4)"/>
+    <ellipse cx="14.6" cy="6.4" rx="2.1" ry="2.8" transform="rotate(6 14.6 6.4)"/>
+    <ellipse cx="18.8" cy="10.6" rx="2" ry="2.6" transform="rotate(20 18.8 10.6)"/>
+  </symbol>
+  <symbol id="i-stroller" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13 3.5a7.5 7.5 0 0 1 7.5 7.5H13z" fill="currentColor" fill-opacity=".25"/>
+      <path d="M2.5 5h2.2l1.8 6h14a6 6 0 0 1-6 5.5H10a3.5 3.5 0 0 1-3.5-3.5V11"/>
+      <circle cx="9" cy="20" r="1.7"/>
+      <circle cx="17" cy="20" r="1.7"/>
+    </g>
+  </symbol>
+  <symbol id="i-wheat" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22V7.5"/>
+      <path d="M12 7.5c-1.6-1-1.6-3.5 0-5.5 1.6 2 1.6 4.5 0 5.5z"/>
+      <path d="M12 12c-2.8.2-4.3-1.4-4.6-3.6 2.4-.2 4.2 1 4.6 3.6zM12 12c2.8.2 4.3-1.4 4.6-3.6-2.4-.2-4.2 1-4.6 3.6z"/>
+      <path d="M12 16.5c-2.8.2-4.3-1.4-4.6-3.6 2.4-.2 4.2 1 4.6 3.6zM12 16.5c2.8.2 4.3-1.4 4.6-3.6-2.4-.2-4.2 1-4.6 3.6z"/>
+    </g>
+  </symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4.2-2.1 1.5a11 11 0 0 0 7.1 7.1l1.5-2.1 4.2 1.6V19a1.8 1.8 0 0 1-1.9 1.8A16.6 16.6 0 0 1 3.2 5.4 1.8 1.8 0 0 1 5 3.5z"/>
+  </symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round">
+      <path d="M12 21.5s-6.8-6.4-6.8-11.6a6.8 6.8 0 0 1 13.6 0c0 5.2-6.8 11.6-6.8 11.6z"/>
+      <circle cx="12" cy="9.8" r="2.5"/>
+    </g>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24">
+    <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7M9 7h8v8"/>
+  </symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round">
+      <rect x="3" y="5.5" width="18" height="13" rx="2"/>
+      <path d="m3.5 7 8.5 6.5L20.5 7"/>
+    </g>
+  </symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M13.4 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3a21 21 0 0 0-2.3-.1c-2.3 0-3.9 1.4-3.9 4v2.2H7.7v3h2.6V21z"/>
+  </symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.9">
+      <rect x="3.5" y="3.5" width="17" height="17" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/>
+    </g>
+  </symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+      <circle cx="12" cy="12" r="8.5"/>
+      <path d="M12 7.5V12l3 2"/>
+    </g>
+  </symbol>
+</svg>
+
+<a class="skip-link" href="#tartalom">Ugrás a tartalomra</a>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <!-- IDE KERÜL AZ IGAZI LOGÓ – ez csak egy ideiglenes szöveges logó -->
+    <a class="brand" href="#top" aria-label="Kalvino Coffee – az oldal teteje">
+      <svg class="brand__svg" viewBox="0 24 600 136" aria-hidden="true" focusable="false">
+        <use href="#lg-text" class="lg-fill"/>
+        <use href="#lg-handle" class="lg-fill"/>
+        <use href="#lg-ring" class="lg-fill"/>
+        <use href="#lg-disc" class="lg-coffee"/>
+      </svg>
+    </a>
+    <nav class="site-nav" aria-label="Fő navigáció">
+      <ul>
+        <li><a href="#rolunk">Rólunk</a></li>
+        <li><a href="#kinalat">Kínálat</a></li>
+        <li><a href="#gyere-be">Gyere be</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="tartalom">
+
+  <!-- 1. HERO -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap hero__grid">
+      <div class="hero__photo">
+        <figure class="polaroid polaroid--hero" style="--tilt: 2.5deg">
+          <div class="polaroid__photo">
+            <picture>
+              <source type="image/webp" srcset="kepek/opt/belso-ter-fotelek-480.webp 480w, kepek/opt/belso-ter-fotelek-960.webp 960w, kepek/opt/belso-ter-fotelek-1200.webp 1200w" sizes="(min-width: 1024px) 460px, (min-width: 480px) 440px, 92vw">
+              <img src="kepek/opt/belso-ter-fotelek-960.jpg" srcset="kepek/opt/belso-ter-fotelek-480.jpg 480w, kepek/opt/belso-ter-fotelek-960.jpg 960w, kepek/opt/belso-ter-fotelek-1200.jpg 1200w" sizes="(min-width: 1024px) 460px, (min-width: 480px) 440px, 92vw" width="960" height="1280" fetchpriority="high" decoding="async" alt="A Kalvino belső tere: két mustársárga fotel egy kerek fa asztal körül, mögöttük nagy ablak a Kálvin tér fáira, előtérben egy sakktábla.">
+            </picture>
+          </div>
+          <figcaption class="polaroid__caption">a sárga fotelek várnak</figcaption>
+        </figure>
+      </div>
+
+      <div class="hero__text">
+        <h1 class="hero__title" id="hero-title">
+          <span class="visually-hidden">Kalvino Coffee</span>
+          <!-- IDE KERÜL AZ IGAZI LOGÓ – ideiglenes szöveges logó, az „o” egy kávéscsésze felülről -->
+          <svg class="logo" viewBox="0 24 600 136" aria-hidden="true" focusable="false">
+            <defs>
+              <text id="lg-text" x="10" y="150">kalvin</text>
+              <path id="lg-ring" fill-rule="evenodd" clip-rule="evenodd" d="M526 73a40 40 0 1 1 0 80a40 40 0 1 1 0-80zm0 15a25 25 0 1 0 0 50a25 25 0 1 0 0-50z"/>
+              <circle id="lg-disc" cx="526" cy="113" r="19"/>
+              <rect id="lg-handle" x="560" y="104" width="34" height="18" rx="9"/>
+              <clipPath id="lg-clip">
+                <use href="#lg-text"/>
+                <use href="#lg-ring"/>
+                <use href="#lg-disc"/>
+                <use href="#lg-handle"/>
+              </clipPath>
+            </defs>
+            <!-- üres betűk -->
+            <g class="logo__empty">
+              <use href="#lg-text"/><use href="#lg-handle"/><use href="#lg-ring"/><use href="#lg-disc"/>
+            </g>
+            <!-- kávé + tejhab, a betűkre vágva -->
+            <g clip-path="url(#lg-clip)">
+              <g class="logo__liquid">
+                <g class="logo__wave">
+                  <path class="logo__foam" d="M0 -10 Q40 -17 80 -10 T160 -10 T240 -10 T320 -10 T400 -10 T480 -10 T560 -10 T640 -10 T720 -10 T800 -10 T880 -10 T960 -10 T1040 -10 V240 H0 Z"/>
+                  <path class="logo__coffee" d="M0 0 Q40 -7 80 0 T160 0 T240 0 T320 0 T400 0 T480 0 T560 0 T640 0 T720 0 T800 0 T880 0 T960 0 T1040 0 V240 H0 Z"/>
+                </g>
+              </g>
+            </g>
+            <!-- kontúr -->
+            <g class="logo__outline">
+              <use href="#lg-text"/><use href="#lg-handle"/><use href="#lg-ring"/><use href="#lg-disc"/>
+            </g>
+          </svg>
+        </h1>
+        <p class="hero__tagline">specialty kávé · reggeli · hétvégén brunch</p>
+
+        <!-- ELLENŐRIZENDŐ: a nyitvatartás helyőrző, a main.js elején írható át -->
+        <p class="status" data-status>
+          <span class="status__dot" aria-hidden="true"></span>
+          <span class="status__text">Nyitvatartás: H–P 7–18, Szo–V 8–14</span>
+        </p>
+
+        <p class="hero__lead">Ülj be a sárga fotelbe. A kutyád is jöhet.</p>
+
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#kinalat">Mutasd, mi van ma</a>
+          <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Kalvino%20Coffee%2C%20K%C3%A1lvin%20t%C3%A9r%202%2C%206800%20H%C3%B3dmez%C5%91v%C3%A1s%C3%A1rhely" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            Útvonal<span class="visually-hidden"> (Google Térkép, új lapon nyílik)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. RÓLUNK -->
+  <section class="about" id="rolunk" aria-labelledby="rolunk-title">
+    <div class="wrap about__grid">
+      <div class="about__text">
+        <p class="eyebrow">Rólunk</p>
+        <h2 id="rolunk-title">Olyan, mint egy nappali. Csak kávéval.</h2>
+        <p class="about__para">
+          A Kálvin téren vagyunk, a nevünk is innen jön: <strong>Kálvin + -ino</strong>, mint egy jó olasz kávé.
+          Specialty kávé, reggeli, napi leves, saját sütik és kovászos kenyér, hétvégén pedig brunch, nem kell sietni.
+          Ülj be a sárga fotelbe a nagy ablak elé, hozd a családot, a sakkpartnered vagy a kutyádat.
+          Ha gluténmentesen vagy laktózmentesen eszel, szólj nyugodtan, figyelünk rá. Kutya, gyerek és mindenki barátja vagyunk :)
+        </p>
+        <ul class="tags" aria-label="Nálunk minden belefér">
+          <li class="tag"><svg class="icon" aria-hidden="true"><use href="#i-paw"/></svg>kutyabarát</li>
+          <li class="tag"><svg class="icon" aria-hidden="true"><use href="#i-stroller"/></svg>gyerekbarát</li>
+          <li class="tag"><svg class="icon" aria-hidden="true"><use href="#i-wheat"/></svg>gluténmentes és laktózmentes opciók</li>
+        </ul>
+      </div>
+
+      <div class="about__photos">
+        <figure class="polaroid polaroid--a" style="--tilt: -4deg">
+          <div class="polaroid__photo">
+            <picture>
+              <source type="image/webp" srcset="kepek/opt/kenyer-belseje-480.webp 480w, kepek/opt/kenyer-belseje-960.webp 960w" sizes="(min-width: 900px) 260px, 46vw">
+              <img src="kepek/opt/kenyer-belseje-480.jpg" srcset="kepek/opt/kenyer-belseje-480.jpg 480w, kepek/opt/kenyer-belseje-960.jpg 960w" sizes="(min-width: 900px) 260px, 46vw" width="960" height="1279" loading="lazy" decoding="async" alt="Kesztyűs kéz tart egy félbetört kovászos kenyeret, a bele szép, nagy likacsos.">
+            </picture>
+          </div>
+          <figcaption class="polaroid__caption">kovász, türelemmel</figcaption>
+        </figure>
+        <figure class="polaroid polaroid--b" style="--tilt: 3.5deg">
+          <div class="polaroid__photo">
+            <picture>
+              <source type="image/webp" srcset="kepek/opt/sutemeny-csoki-480.webp 480w, kepek/opt/sutemeny-csoki-960.webp 960w" sizes="(min-width: 900px) 260px, 46vw">
+              <img src="kepek/opt/sutemeny-csoki-480.jpg" srcset="kepek/opt/sutemeny-csoki-480.jpg 480w, kepek/opt/sutemeny-csoki-960.jpg 960w" sizes="(min-width: 900px) 260px, 46vw" width="960" height="1278" loading="lazy" decoding="async" alt="Házi sütemény palatányéron, tetején tejszínhab-halmokkal és csorgatott étcsokoládéval.">
+            </picture>
+          </div>
+          <figcaption class="polaroid__caption">házi süti</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mancsnyomok: egy kutya egyszer átsétál a képernyőn -->
+  <div class="paws" aria-hidden="true"></div>
+
+  <!-- 3. KÍNÁLAT -->
+  <section class="menu" id="kinalat" aria-labelledby="kinalat-title">
+    <div class="wrap">
+      <p class="eyebrow">Kínálat</p>
+      <h2 id="kinalat-title">Mi van ma?</h2>
+    </div>
+
+    <div class="wrap menu__grid">
+      <article class="board" aria-labelledby="board-title">
+        <h3 class="board__title" id="board-title">Ma a levesünk</h3>
+        <!-- A leves szövege a main.js elején (MAI_LEVES) írható át -->
+        <p class="board__soup" data-soup-name>Toszkán paradicsomleves</p>
+        <p class="board__desc" data-soup-desc>mini mozzarellával és rukkolával. Forró, fűszeres, tökéletes.</p>
+        <ul class="board__diet" data-soup-diet>
+          <li>gluténmentes</li>
+          <li>mozzarella nélkül laktózmentes is</li>
+        </ul>
+        <span class="board__chalk" aria-hidden="true"></span>
+      </article>
+
+      <div class="cards-wrap">
+        <ul class="cards" tabindex="0" aria-label="Kínálat – mobilon oldalra húzható">
+          <li>
+            <article class="card card--coffee" tabindex="0" aria-labelledby="c-kave">
+              <figure class="polaroid polaroid--card polaroid--art" style="--tilt: -1.5deg">
+                <div class="polaroid__photo">
+                  <!-- Nincs saját kávéfotó: SVG latte art illusztráció -->
+                  <svg class="latte" viewBox="0 0 200 200" role="img" aria-label="Illusztráció: egy csésze kávé felülről, tejhab-szívvel">
+                    <defs>
+                      <radialGradient id="crema" cx="50%" cy="45%" r="55%">
+                        <stop offset="0" stop-color="#B07A47"/>
+                        <stop offset=".7" stop-color="#8A5530"/>
+                        <stop offset="1" stop-color="#5E3519"/>
+                      </radialGradient>
+                    </defs>
+                    <rect width="200" height="200" fill="#E9DCC4"/>
+                    <circle cx="96" cy="104" r="84" fill="#F7F1E6" stroke="#2E211A" stroke-width="2.5"/>
+                    <circle cx="96" cy="104" r="68" fill="none" stroke="#2E211A" stroke-opacity=".18" stroke-width="2"/>
+                    <rect x="146" y="92" width="44" height="22" rx="11" fill="#2F5B3B" stroke="#2E211A" stroke-width="2.5"/>
+                    <circle cx="96" cy="104" r="56" fill="#2F5B3B" stroke="#2E211A" stroke-width="2.5"/>
+                    <circle cx="96" cy="104" r="47" fill="url(#crema)"/>
+                    <g class="latte__heart">
+                      <path class="latte__heart-fill" d="M96 136c-22-13-31-27-27-38 4-10 18-11 27 1 9-12 23-11 27-1 4 11-5 25-27 38z"/>
+                      <path class="latte__heart-line" pathLength="1" d="M96 150V136c-22-13-31-27-27-38 4-10 18-11 27 1 9-12 23-11 27-1 4 11-5 25-27 38"/>
+                    </g>
+                  </svg>
+                </div>
+              </figure>
+              <h3 id="c-kave">Kávé</h3>
+              <p>Specialty kávé, gondosan lefőzve. Kérdezd meg a pultnál, mi a mai kedvencünk.</p>
+              <p class="card__hint" aria-hidden="true">Vidd fölé az egeret, vagy érintsd meg :)</p>
+            </article>
+          </li>
+          <li>
+            <article class="card" aria-labelledby="c-reggeli">
+              <figure class="polaroid polaroid--card" style="--tilt: 1.5deg">
+                <div class="polaroid__photo">
+                  <picture>
+                    <source type="image/webp" srcset="kepek/opt/kovaszos-kenyerek-480.webp 480w, kepek/opt/kovaszos-kenyerek-960.webp 960w" sizes="(min-width: 768px) 320px, 78vw">
+                    <img src="kepek/opt/kovaszos-kenyerek-480.jpg" srcset="kepek/opt/kovaszos-kenyerek-480.jpg 480w, kepek/opt/kovaszos-kenyerek-960.jpg 960w" sizes="(min-width: 768px) 320px, 78vw" width="960" height="1280" loading="lazy" decoding="async" alt="Ropogós héjú kovászos kenyerek egy fonott kosárban, mögöttük egy sárga fotel.">
+                  </picture>
+                </div>
+              </figure>
+              <h3 id="c-reggeli">Reggeli &amp; kovászos kenyér</h3>
+              <p>Nyugis reggel, ropogós kovászos kenyérrel. Ülj le, vagy vidd haza egy veknit.</p>
+            </article>
+          </li>
+          <li>
+            <article class="card" aria-labelledby="c-leves">
+              <figure class="polaroid polaroid--card" style="--tilt: -2deg">
+                <div class="polaroid__photo">
+                  <picture>
+                    <source type="image/webp" srcset="kepek/opt/toszkan-paradicsomleves-480.webp 480w, kepek/opt/toszkan-paradicsomleves-960.webp 960w" sizes="(min-width: 768px) 320px, 78vw">
+                    <img src="kepek/opt/toszkan-paradicsomleves-480.jpg" srcset="kepek/opt/toszkan-paradicsomleves-480.jpg 480w, kepek/opt/toszkan-paradicsomleves-960.jpg 960w" sizes="(min-width: 768px) 320px, 78vw" width="960" height="960" loading="lazy" decoding="async" alt="Toszkán paradicsomleves felülről, mini mozzarellagolyókkal és friss rukkolával, fa asztalon.">
+                  </picture>
+                </div>
+              </figure>
+              <h3 id="c-leves">Napi leves</h3>
+              <p>Forró, fűszeres, szezonális. Rendszeresen váltjuk, és szólunk, ha gluténmentes vagy laktózmentes is lehet.</p>
+            </article>
+          </li>
+          <li>
+            <article class="card" aria-labelledby="c-brunch">
+              <figure class="polaroid polaroid--card" style="--tilt: 2deg">
+                <div class="polaroid__photo">
+                  <picture>
+                    <source type="image/webp" srcset="kepek/opt/brunch-tanyerok-480.webp 480w, kepek/opt/brunch-tanyerok-960.webp 960w" sizes="(min-width: 768px) 320px, 78vw">
+                    <img src="kepek/opt/brunch-tanyerok-480.jpg" srcset="kepek/opt/brunch-tanyerok-480.jpg 480w, kepek/opt/brunch-tanyerok-960.jpg 960w" sizes="(min-width: 768px) 320px, 78vw" width="960" height="960" loading="lazy" decoding="async" alt="Három zöld tányéron brunch: porcukros bundás kenyér, krém, málna, áfonya és dió.">
+                  </picture>
+                </div>
+              </figure>
+              <h3 id="c-brunch">Hétvégi brunch &amp; sütik</h3>
+              <p>Hétvégén brunch, nem kell sietni. Mellé egy szelet házi süti, mert miért ne.</p>
+            </article>
+          </li>
+        </ul>
+        <p class="menu__note">Az aktuális kínálatot a pultnál és a <a href="https://www.facebook.com/p/kalvino_coffee-100047671282310/" target="_blank" rel="noopener">Facebookon<span class="visually-hidden"> (új lapon nyílik)</span></a> találod.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. GYERE BE -->
+  <section class="visit" id="gyere-be" aria-labelledby="gyere-be-title">
+    <div class="wrap visit__grid">
+      <div class="visit__info">
+        <p class="eyebrow eyebrow--light">Gyere be</p>
+        <h2 id="gyere-be-title">Gyere be, ott leszünk a téren.</h2>
+
+        <dl class="info">
+          <div class="info__row">
+            <dt><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Cím</dt>
+            <dd>6800 Hódmezővásárhely, Kálvin tér 2.</dd>
+          </div>
+          <div class="info__row">
+            <dt><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Nyitvatartás</dt>
+            <dd>
+              <!-- ELLENŐRIZENDŐ: helyőrző időpontok, a main.js elején (NYITVATARTAS) írhatók át -->
+              <ul class="hours" data-hours>
+                <li><span>H–P</span> <span>7:00–18:00</span></li>
+                <li><span>Szo–V</span> <span>8:00–14:00</span></li>
+              </ul>
+            </dd>
+          </div>
+          <div class="info__row">
+            <dt><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Telefon</dt>
+            <dd><a href="tel:+36308966831">+36 30 896 6831</a></dd>
+          </div>
+          <div class="info__row">
+            <dt><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>E-mail</dt>
+            <dd><a href="mailto:kalvinocoffee@gmail.com">kalvinocoffee@gmail.com</a></dd>
+          </div>
+        </dl>
+
+        <div class="btn-row">
+          <a class="btn btn--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Kalvino%20Coffee%2C%20K%C3%A1lvin%20t%C3%A9r%202%2C%206800%20H%C3%B3dmez%C5%91v%C3%A1s%C3%A1rhely" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>
+            Útvonal<span class="visually-hidden"> (Google Térkép, új lapon nyílik)</span>
+          </a>
+          <a class="btn btn--light" href="https://www.facebook.com/p/kalvino_coffee-100047671282310/" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-fb"/></svg>
+            Facebook<span class="visually-hidden"> (új lapon nyílik)</span>
+          </a>
+          <!-- ELLENŐRIZENDŐ: Instagram-link a kalvino_coffee felhasználónév alapján -->
+          <a class="btn btn--light" href="https://www.instagram.com/kalvino_coffee/" target="_blank" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-ig"/></svg>
+            Instagram<span class="visually-hidden"> (új lapon nyílik)</span>
+          </a>
+        </div>
+        <p class="visit__fb">A Facebookon 12 véleményből 100% ajánl minket. Köszi! :)</p>
+      </div>
+
+      <figure class="polaroid polaroid--visit" style="--tilt: -3deg">
+        <div class="polaroid__photo">
+          <picture>
+            <source type="image/webp" srcset="kepek/opt/sutotok-kremleves-480.webp 480w, kepek/opt/sutotok-kremleves-960.webp 960w" sizes="(min-width: 900px) 380px, 80vw">
+            <img src="kepek/opt/sutotok-kremleves-480.jpg" srcset="kepek/opt/sutotok-kremleves-480.jpg 480w, kepek/opt/sutotok-kremleves-960.jpg 960w" sizes="(min-width: 900px) 380px, 80vw" width="960" height="960" loading="lazy" decoding="async" alt="Egy kéz sütőtökkrémlevest tart tejszíncsíkkal és pirított tökmaggal, a háttérben őszi falevelek.">
+          </picture>
+        </div>
+        <figcaption class="polaroid__caption">ősszel sütőtök, persze</figcaption>
+      </figure>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="site-footer__name">Kalvino Coffee</p>
+    <p>6800 Hódmezővásárhely, Kálvin tér 2.</p>
+    <p class="site-footer__credit">Mintaoldal – készítette: NoForm Project</p>
+  </div>
+</footer>
+
+<!-- Csészeszint görgetésjelző -->
+<button class="cup-top" type="button" aria-label="Vissza az oldal tetejére">
+  <svg viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+    <defs>
+      <clipPath id="cup-inside"><path d="M14 22h30l-3 24a6 6 0 0 1-6 5H23a6 6 0 0 1-6-5z"/></clipPath>
+    </defs>
+    <path class="cup-top__steam" d="M24 16c-2-3 2-5 0-8M32 16c-2-3 2-5 0-8"/>
+    <g clip-path="url(#cup-inside)">
+      <rect class="cup-top__level" x="10" y="22" width="40" height="32"/>
+    </g>
+    <path class="cup-top__body" d="M14 22h30l-3 24a6 6 0 0 1-6 5H23a6 6 0 0 1-6-5zM44 27h3a5 5 0 0 1 0 10h-4.2M9 55h40"/>
+  </svg>
+</button>
+
+<!-- Mobilos gyorssáv -->
+<nav class="callbar" aria-label="Gyors elérés">
+  <a href="tel:+36308966831"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Hívás</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Kalvino%20Coffee%2C%20K%C3%A1lvin%20t%C3%A9r%202%2C%206800%20H%C3%B3dmez%C5%91v%C3%A1s%C3%A1rhely" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Útvonal<span class="visually-hidden"> (új lapon nyílik)</span></a>
+</nav>
+
+</body>
+</html>
